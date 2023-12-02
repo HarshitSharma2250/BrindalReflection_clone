@@ -1,0 +1,1391 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-shadow: inset;
+}
+.dispay_block{
+    width: 100%;
+   height:60px;
+ background: linear-gradient(to right,rgba(200,165,90,1) 0%,rgba(223,208,146,1) 40%,rgba(223,208,146,1) 60%,rgba(200,165,90,1) 100%);
+    position: fixed;
+    z-index: 9999998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dispay_block>a{
+    color: #fff;
+    font-size: 18px; 
+}
+header{
+    padding-top:12vh;
+    width: 100%;
+
+}
+header>.menu_bar_box{
+    width: 100%;
+    text-align: center;
+    border-bottom: .5px solid #fff;
+    display: block;
+    background-color: black;
+    color: #fff;
+    height: 10vh;
+    line-height:3rem;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+header>#hide_menu_list{
+    display: none;
+}
+
+header>.birndal_logo{
+width:100%;
+height:30vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+header>.birndal_logo img{
+    width: 250px;
+    height: 70px;
+}
+header>.menu_list{
+width: 100%;
+}
+header>.menu_list>ul{
+    text-align: center;
+    width:100%; 
+    padding-left: 2%;
+}
+header>.menu_list>ul>li{
+   width:auto;
+    text-transform: uppercase;
+    line-height:3;
+    display:inline-block;
+    vertical-align: baseline;
+    padding-right:2%;
+}
+header>.menu_list>ul>li>a{
+color: black;
+font-size: 14px;
+font-weight: 550;
+opacity:.7;
+
+}
+/* .box_inside_it{
+    border: 1px solid red;
+    width: 10%;
+} */
+.fa_times{
+   float: right;
+ display: none;
+}
+.box_inside_it:hover>.fa_times{
+  display: none;
+}
+.box_inside_it:hover .fa-times{
+    display: none;
+}
+.fa_times>.fa-times{
+    font-size: 22px;
+    padding-top: 10px;
+}
+
+.menu_list_collection{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width:100%;
+    left:0%;
+top: 51%;
+padding: 10px 10px;
+height: auto;
+background-color: rgb(22, 22, 22);
+transition: .5s ease;
+z-index: 999;
+padding-top: 30px;
+}
+
+li:hover>.menu_list_collection{
+    visibility: visible;
+    opacity: 1;
+}
+.menu_list_collection>p{
+    transform: scaley(1.2) ;
+    text-align: left;
+    
+}
+.menu_list_collection>p>a{
+    font-size:13px;
+    color: rgba(200,165,90,1) ;
+    text-transform: uppercase;
+    font-weight:600;
+    
+}
+.menu_list_collection>.bride_collection_boxes{
+    display: flex;
+    justify-content: space-between;
+   width: 100%;
+   overflow-x: hidden;
+   
+}
+.bride_collection_boxes>.box{
+    margin-top: 10px;
+   width: 22%;
+ height: auto;
+ padding-bottom: 20px;
+ padding-right: 5px;
+}
+.bride_collection_boxes>.box>p{
+    color: rgba(200,165,90,1) ;
+    font-size: 18px;
+    width: 100%;
+    padding-bottom: 10px ;
+    cursor: pointer;
+    line-height: 1.5;
+    text-align:left;
+}
+.bride_collection_boxes>.box>img{
+width:80%;
+height: 50vh;
+float: right;
+}
+.bride_collection_boxes>.box>ul>li{
+    font-size: 13px;
+ cursor: pointer;
+    margin-bottom: 13px;
+ text-transform: uppercase;
+ color: #fff;
+ line-height: 1.6;
+ text-align: left;
+}
+.bride_collection_boxes>#box_bride_collection_boxes{
+padding-top: 39px;
+margin-left: 5px;
+}
+
+.menu_list_collection>.evening_wears_collection_boxes{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+.evening_wears_collection_boxes>.box{
+    margin-top: 10px; 
+ height: auto;
+ padding-bottom: 20px;
+ border: 2px solid transparent;
+ padding-right: 5px;
+}
+.evening_wears_collection_boxes>#evening_wears_box_pic>img{
+    width:100%;
+height: 50vh;
+float: right;
+}
+.evening_wears_collection_boxes>.box>ul>li{
+    font-size: 13px;
+ cursor: pointer;
+    margin-bottom: 13px;
+ text-transform: uppercase;
+ color: #fff;
+ line-height: 1.6;
+}
+.menu_list_collection>.trunks_shows_collection_boxes{
+    display: flex;
+    justify-content: space-between;
+
+}
+.trunks_shows_collection_boxes>.box{
+    margin-top: 10px;
+    width: 23%;
+    height: auto;
+    padding-bottom: 20px;
+    padding-right: 5px;
+}
+.trunks_shows_collection_boxes>.box>img{
+    width: 100%;
+    height: 30vh;
+}
+.trunks_shows_collection_boxes>.box>p{
+    color: rgba(200,165,90,1) ;
+    text-transform: uppercase;
+    width: 80%;
+    line-height: 1.7;
+}
+.trunks_shows_collection_boxes>.box>.content{
+    color: #fff;
+    font-size: 12px;
+margin-top: 3px;
+line-height: 1.5;
+}
+#locations_menu_list_collection{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width:100%;
+    left:0%;
+top: 62%;
+padding: 10px 10px;
+height: auto;
+background-color: rgb(22, 22, 22);
+transition: .5s ease;
+z-index: 999;
+}
+li:hover #locations_menu_list_collection{
+    visibility: visible;
+    opacity: 1;
+}
+main>.brindal_image_bigOne{
+    background-image: url('https://www.bridalreflections.com/wp-content/uploads/2023/03/home-intro.jpg');
+    background-position: center;
+    height: 110vh;
+    background-size: cover;
+    width: 100%;
+    display:flex;
+justify-content: center;
+align-items: center;
+}
+main>.brindal_image_bigOne>img{
+width: 53%;
+height: 90vh;
+}
+main>.brindal_reflection{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+main>.brindal_reflection>p:first-child{
+font-family: 'My Soul';
+font-size: 50px;
+color: rgba(200,165,90,1) ;
+}
+main>.brindal_reflection>p:nth-child(2){
+    font-size: 30px;
+    text-transform: uppercase;
+}
+main>.brindal_reflection_img_boxesContainer{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-template-rows: repeat(auto,25vh);
+  gap:50px  20px;
+}
+.brindal_reflection_img_boxesContainer>.box>img{
+width:100%;
+}
+
+.brindal_reflection_img_boxesContainer>.box>p{
+    width: 100%;
+    margin: 2px auto;
+    text-align: center;
+    font-weight:550;
+    
+}
+main>.Upcoming_trunk_shows{
+    width: 100%;
+    height: 150vh;
+    padding: 0 35px;
+    background: linear-gradient(to right, rgb(200, 165, 90) 0%, rgb(223, 208, 146) 40%, rgb(223, 208, 146) 60%, rgb(200, 165, 90) 100%);
+    margin-top: 13vh;
+}
+main>.Upcoming_trunk_shows>.upcoming{
+    font-family: 'My Soul';
+    text-align: center;
+    font-size: 70px;
+    padding-top:2rem;
+}
+main>.Upcoming_trunk_shows>.trunk_shows_text{
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+main>.Upcoming_trunk_shows>.trunk_shows_sider_box{
+    max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.Upcoming_trunk_shows >.trunk_shows_sider_box>i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background:transparent;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.Upcoming_trunk_shows >.trunk_shows_sider_box>i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.Upcoming_trunk_shows >.trunk_shows_sider_box>i:first-child{
+  left: -25px;
+}
+.Upcoming_trunk_shows >.trunk_shows_sider_box>i:last-child{
+  right: -22px;
+}
+.trunk_shows_sider_box>.carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 2) );
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 95%;
+  margin: auto;
+}
+.trunk_shows_sider_box>.carousel::-webkit-scrollbar {
+  display: none;
+}
+.trunk_shows_sider_box>.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.trunk_shows_sider_box>.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.trunk_shows_sider_box>.carousel.dragging>.card {
+  cursor: grab;
+  user-select: none;
+}
+
+.trunk_shows_sider_box>.carousel>.card {
+    padding-bottom: 50px;
+  scroll-snap-align: start;
+  height:auto;
+  list-style: none;
+  background: #fff;
+  border-radius: 8px;
+  width:95%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+}
+.carousel>.card>.img {
+  width:55%;
+  margin: auto;
+  
+}
+.carousel>.card>.img>img {
+    height:auto;
+    width:100%;
+  object-fit: cover;
+}
+.carousel>.card>.date{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.carousel>.card>span {
+  color: #6A6D78;
+  font-size:18px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  display: block;
+  cursor: pointer;
+}
+.carousel>.card>hr{
+width: 40%;
+margin: 15px auto;
+}
+.carousel>.card>.card_content{
+    font-size: 17px;
+    font-weight: 550;
+    width: 85%;
+    margin: auto;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+main>.Upcoming_trunk_shows>.button{
+    width: 300px;
+    margin: auto;
+    margin-top: 10vh;
+  height: 15vh;
+  background-color: rgb(32, 30, 30);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition:.5s ease;
+}
+.Upcoming_trunk_shows>.button>button{
+    width: 100%;
+ font-size: 22px;
+ text-transform: uppercase;
+ border: none;
+ background-color: transparent;
+ color: #fff;
+ opacity:1;
+}
+.Upcoming_trunk_shows>.button:hover{
+    background-color: rgb(114, 110, 72);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+main>.long_island_location_collection{
+    width: 100%;
+    height: 140vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(1,140vh);
+}
+.long_island_location_collection>.box{
+    background-color: rgb(195, 213, 224);
+   padding-top: 50vh;
+    padding-left: 10%;
+}
+.long_island_location_collection>.box>p{
+    margin: 5vh 0%;
+    font-size: 22px;
+    color: #fff;
+}
+.long_island_location_collection>.box>button{
+    background-color: rgb(57, 55, 55);
+    color: #fff;
+    width: 250px;
+    height: 14vh;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:.5s ease;
+}
+.long_island_location_collection>.box>button:hover{
+background-color: rgb(191, 157, 85);
+border: none;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.long_island_location_collection>.box>img{
+    width: 90%;  
+}
+
+.long_island_location_collection>.box1>img{
+    width: 100%;
+    height: 140vh;
+}
+main>.our_newYark_content{
+   padding-top:5rem;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+main>.our_newYark_content>p:first-child{
+    font-size: 20px;
+    width: 50%;
+   margin: auto;
+    transform: scaley(1.5);
+}
+main>.our_newYark_content>p:nth-child(2){
+    width:430px;
+    font-family: 'My Soul';
+     font-size: 70px;
+       margin: 3vh auto;
+       transform: scalex(1.4);
+}
+
+main>.our_newYark_content>p:nth-child(3){
+    font-size:17px;
+    width: 95%;
+    margin: auto;
+    color: #999;
+     margin-bottom:6rem;
+     transform: scaley(1.5);
+}
+main>.our_newYark_content>p:nth-child(4){
+    transform: scaley(1.5);
+    width:65%;
+    margin: auto;
+    line-height: 1.8; 
+    opacity: .8;
+    margin-bottom:3.5rem;
+}
+main>.our_newYark_content>.brindal_boxes_location_img{
+    width:90%;
+    margin-left: 3%;
+}
+.our_newYark_content>.brindal_boxes_location_img>.box{
+    display: flex;
+    width: 100; 
+     margin-bottom: 5rem ;
+     margin-top: 2rem;
+}
+.brindal_boxes_location_img>.box>.img{
+    width:46%;
+    height: 65vh;
+    cursor: pointer;
+}
+.brindal_boxes_location_img>.box>#img_box{
+    cursor: pointer;
+}
+.brindal_boxes_location_img>.box>#img_box2{
+    cursor: pointer;
+}
+
+.brindal_boxes_location_img>.box>.img>img{
+    width: 100%;
+    height:65vh;  
+    box-shadow: rgba(68, 66, 66, 0.553) 5px 10px 20px;
+}
+.brindal_boxes_location_img>.box>.about_pic1{
+    margin-top:1rem;
+    width:3%;
+    height: 58vh;
+    background-color: rgb(222, 159, 76);
+}
+.brindal_boxes_location_img>.box>.about_pic{
+    margin-top:1rem;
+    background: linear-gradient(to right, rgb(200, 165, 90) 0%, rgb(223, 208, 146) 40%, rgb(223, 208, 146) 60%, rgb(200, 165, 90) 100%);
+    width: 52%;
+    height: 58vh;
+    display: flex;
+    flex-direction: column;
+    padding-top:2rem;
+}
+.brindal_boxes_location_img>.box>.about_pic>p{
+    margin-bottom: 1rem;
+    font-size: 17px;
+    transform: scaley(1.5);
+    color: #fff;
+}
+.brindal_boxes_location_img>.box>.about_pic>.address{
+    margin-top: 15px;
+    font-size: 12px;
+    text-align: center;  
+    color:#fff;
+    transform: scaley(1.5);
+}
+.brindal_boxes_location_img>.box>.about_pic>.address>p:nth-child(2){
+    width: 30%;
+    margin: auto;
+    line-height: 1.1;
+    margin-top: 3px;
+
+}
+.brindal_boxes_location_img>.box>.about_pic>button{
+    border:1px solid #fff;
+    width: 14rem;
+    height: 7vh;
+    transform: scaley(1.3);
+    margin: auto;
+    background-color: transparent;
+    color: #fff;
+text-transform: uppercase;
+font-size: 12px;
+font-weight: 550;
+cursor: pointer;
+transition: .5s ease;
+}
+.brindal_boxes_location_img>.box>.about_pic>button:hover{
+background-color: rgb(141, 140, 102);
+border: none;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+main>.see_our_bride_container{
+   margin-top: 10rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+main>.see_our_bride_container>.box{
+    width:65%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+}
+main>.see_our_bride_container>.box>p:first-child{
+    font-family: 'My Soul';
+    font-size: 70px;
+      margin: 3vh auto;
+      transform: scalex(1.4);
+      color: rgba(200,165,90,1) ;
+}
+main>.see_our_bride_container>.box>p:nth-child(2){
+    transform: scaley(1.5);
+    color: #fff;
+}
+main>.see_our_bride_container>.box>button{
+    border: 1px solid #fff;
+    margin-top: 2.5rem;
+    width: 200px;
+    font-size: 15px;
+    transform: scaley(1.5);
+    text-transform: uppercase;
+    height: 8vh;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s ease;
+}
+main>.see_our_bride_container>.box>button:hover{
+    background-color: rgb(189, 163, 96);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+main>.see_our_bride_container>img{
+    width: 35%;
+}
+main>.badding_blog_container{
+    width: 100%; 
+    text-align: center;
+    margin-top: 4rem;
+}
+main>.badding_blog_container>p:first-child{
+    width: 59%;
+    font-family: 'My Soul';
+    font-size: 70px;
+    transform: scalex(1.5);
+   margin: auto;
+}
+main>.badding_blog_container>p:nth-child(2){
+ color: rgba(200,165,90,1) ;
+ font-size: 20px;
+ transform: scaley(1.5);
+
+}
+main>.badding_blog_container>.badding_blog_boxes{
+   padding-top: 30px;
+    display: flex;
+    width: 92%;
+    margin: auto;
+  
+}
+.badding_blog_container>.badding_blog_boxes>.box{
+    width: 50%; 
+    margin: 0px 3px;
+    height: 18rem;
+}
+.badding_blog_container>.badding_blog_boxes>.box>img{
+width: 100%;
+height: 12rem;
+cursor: pointer;
+}
+.badding_blog_container>.badding_blog_boxes>.box>p{
+    transform: scaley(1.5);
+    margin: 2rem 0%;
+    font-size: 13px;
+    transition: .5s ease;
+}
+.badding_blog_container>.badding_blog_boxes>.box>p:hover{
+    color: rgba(200,165,90,1) ;
+}
+.badding_blog_container>button{
+    margin: 3rem 0%;
+    width: 300px;
+    font-size: 15px;
+    transform: scaley(1.5);
+    text-transform: uppercase;
+    height: 9vh;
+    color: #fff;
+    background-color: rgb(28, 28, 28);
+    cursor: pointer;
+    transition: .5s ease;
+    border: none;
+}
+.badding_blog_container>button:hover{
+ background-color: rgb(158, 157, 100) ;
+}
+main>.see_our_bride_container{
+    margin-top: 2rem;
+}
+#see_ore_bride_containr{
+    margin-top: 2rem;
+
+}
+.see_our_bride_container>#appointment_request>p:nth-child(3){
+    color: #fff;
+    margin-top:1rem;
+}
+.see_our_bride_container>#appointment_request>h3{
+    color: #fff;
+}
+.see_our_bride_container>.img_see_ore_bride{
+    width:45%; 
+}
+.see_our_bride_container>#appointment_request>button{
+    width:260px;
+    transform: scaley(1.3);
+}
+main>.as_seen_in_container{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, rgb(200, 165, 90) 0%, rgb(223, 208, 146) 40%, rgb(223, 208, 146) 60%, rgb(200, 165, 90) 100%);
+    padding-bottom: 4rem;
+}
+main>.as_seen_in_container>.boxes{
+display: flex;
+justify-content:center;
+width: 95%;
+margin: auto;
+flex-wrap:wrap;
+}
+main>.as_seen_in_container>p{
+    text-align: center;
+    padding-top: 3rem;
+    color: #fff;
+    font-size: 17px;
+    transform: scaley(1.3);
+}
+main>.as_seen_in_container>.boxes>img{
+    width:80px;
+    margin: 0px 2%;
+    margin-top: 3rem;
+}
+main>.join_us_on_instagram{
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom:10rem ;
+}
+.join_us_on_instagram>p:first-child{
+    font-family: 'My Soul';
+    font-size: 50px;
+    width: 50%;
+    transform: scalex(1.5);
+    margin: auto;
+}
+.join_us_on_instagram>p:nth-child(2){
+    font-size: 26px;
+    color: rgba(200,165,90,1) ;
+    transform: scaleY(1.4);
+    margin: 1rem 0%;
+}
+.join_us_on_instagram>.pic_container{
+display: flex;
+height: 5rem;
+}
+.join_us_on_instagram>.pic_container>.box{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    height: 164.6px;
+    width: 20%;
+    display: flex;
+   justify-content: center;
+   align-items:center;
+   cursor: pointer;
+}
+.join_us_on_instagram>.pic_container>.box>.fa-play{
+    font-size:27px;
+    color: #fff;
+}
+.join_us_on_instagram>.pic_container>#box1{
+    background-image: url('https://www.bridalreflections.com/wp-content/uploads/sb-instagram-feed-images/364951565_235177775601045_2346551495892428120_nlow.jpg');
+    
+}
+.join_us_on_instagram>.pic_container>#box2{
+    background-image: url('https://www.bridalreflections.com/wp-content/uploads/sb-instagram-feed-images/364265303_978116643513961_7264236890154203304_nlow.jpg');
+
+}
+.join_us_on_instagram>.pic_container>#box3{
+    background-image: url('https://www.bridalreflections.com/wp-content/uploads/sb-instagram-feed-images/364261933_6211109515685211_1057012198614561679_nlow.jpg');
+}
+.join_us_on_instagram>.pic_container>#box4{
+    background-image: url('https://www.bridalreflections.com/wp-content/uploads/sb-instagram-feed-images/363813137_223266814023712_309768155240676825_nlow.jpg');
+}
+.join_us_on_instagram>.pic_container>#box5{
+    background-image: url('https://www.bridalreflections.com/wp-content/uploads/sb-instagram-feed-images/363873672_200414916057132_5532718114526774578_nlow.jpg');
+}
+.join_us_on_instagram>.pic_container>#box6{
+    background-image: url('https://www.bridalreflections.com/wp-content/uploads/sb-instagram-feed-images/363495395_825765862450962_2230597244372921250_nlow.jpg');
+}
+main>.logos_different_copany{
+    width: 100%;
+}
+main>.logos_different_copany>p{
+    text-align: center;
+}
+main>.logos_different_copany>.box{
+   display: flex;
+   flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+    gap:10px 30px;
+    width:90%;
+    margin: auto;
+    margin-top:2rem;
+    
+}
+main>.logos_different_copany>.box>img{
+    width:90px;
+}
+footer{
+    width: 100%;
+    margin-top:5rem;
+    background-color: rgb(26, 25, 25);
+    padding-top: 5rem;
+    padding-bottom:1rem;
+}
+footer>.option_conatiner{
+    width:95%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+footer>.option_conatiner>ul>li{
+ line-height:2.4;
+ color: #fff;
+ transform: scaleY(1.3);
+ cursor: pointer;
+ font-size: 14px;
+}
+footer>.first_lower_container_footer>li{
+    color: #fff;
+    line-height:2.4;
+    transform: scaleY(1.3);
+    font-size: 14px;
+    cursor: pointer;
+    margin-left:2.5%;
+}
+footer>.social_media{
+    margin: 5rem 0%;
+}
+footer>.social_media>ul{
+    
+    display: flex;
+    justify-content: center;
+}
+footer>.social_media>ul>li{
+    margin: 0px 2%;
+    cursor: pointer;
+}
+footer>.social_media>ul>li>img{
+    width: 34px;
+
+}
+footer>.social_media>ul>.facebook_logo>img{
+    width: 20px;
+}
+footer>.social_media>#about_brindal_saloon>li{
+    margin-top:2rem;
+    color: #fff;
+    border-right: 2px solid #fff;
+    padding-right: 2%;
+    margin-left:0;
+    transform: scaleY(1.3);
+}
+footer>.social_media>p{
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    transform: scaleY(1.3);
+cursor: pointer;
+}
+@media screen and (max-width:1040px) {
+    #aboutUs_menu_list_collection{
+        top:60%;
+    }
+}
+@media screen and (max-width:1012px) {
+ main>.brindal_reflection_img_boxesContainer{       
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(auto , 25vh);
+        place-items:  center;
+      gap:50px  20px;
+    }
+}
+@media screen and (max-width:960px) {
+    .box_inside_it:hover>.fa_times{
+        display: inline;
+      }
+      .box_inside_it:hover .fa-times{
+          display: inline;
+      }
+    header>.menu_bar_box{
+        display: block;
+    }
+    header>.menu_list{
+        display: none;
+    }
+    header>.menu_bar2_box:checked~.menu_list{
+        display: block;
+    }
+
+    header>.menu_list>ul{
+        width:100%; 
+      text-align: left;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5 ,auto);
+        gap: 0vh 3vw;
+    }
+    header>.menu_list>ul>li>a{
+        transform: scaleY(1.4);
+        width:100%;
+        display: inline;
+        }
+        
+        li:hover>.fa_times{
+           display: inline-block;
+        }
+  .menu_list_collection{
+     top: 63%;
+        }
+        #locations_menu_list_collection{
+        top: 102%;
+        
+        }
+        #aboutUs_menu_list_collection{
+            top:92%;
+        }
+        #trunks_shows_menu_list_collection{
+            top: 82%;
+        }
+        #eveaning_wear_menu_list_collection{
+            top: 73%;
+        }
+        .menu_list_collection>.bride_collection_boxes{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 0vh .5%;
+           width: 100%;
+        }
+        .bride_collection_boxes>.box{
+            margin-top:0px;
+           width: 100%;
+         padding-bottom: 0px;
+        }
+        .bride_collection_boxes>.box>img{
+            width:80%;
+            height: 100vh;
+            float: left;
+            }
+ .menu_list_collection>.evening_wears_collection_boxes{
+   display: grid;
+ grid-template-columns: repeat(2,1fr);
+ width: 100%;
+  }
+  .evening_wears_collection_boxes>.box{
+    margin-top: 0px; 
+ padding-bottom: 0px;
+}
+
+.menu_list_collection>.trunks_shows_collection_boxes{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4vh 50px;
+}
+.trunks_shows_collection_boxes>.box{
+    width:100%;
+}
+.trunks_shows_collection_boxes>.box>img{
+    width: 100%;
+    height: 48vh;
+}
+.trunks_shows_collection_boxes>.box>.content{
+    color: #fff;
+    font-size: 12px;
+margin-top: 3px;
+line-height: 1.5;
+width:160px;
+}
+main>.brindal_image_bigOne{
+    height: 90vh;
+}
+main>.brindal_image_bigOne>img{
+width: 53%;
+height: 70vh;
+}
+
+}
+@media screen and (max-width:800px) {
+    .trunk_shows_sider_box>.carousel{
+        grid-auto-columns: calc((100% / 1) );
+       
+      }
+      .carousel>.card>.card_content{
+        font-size: 17px;
+        font-weight: 550;
+        width: 85%;
+      margin-bottom: 10vh;
+        text-transform: uppercase;
+    }
+    .our_newYark_content>.brindal_boxes_location_img>.box{
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+         margin-bottom: 2rem ;
+         margin-top: 7rem;
+    }
+    .brindal_boxes_location_img>.box>.about_pic1{
+        display: none;
+    }
+    .brindal_boxes_location_img>.box>.img{
+        width:70%;
+        height: 65vh;
+        margin: auto;
+        z-index: 100;
+    }
+    .brindal_boxes_location_img>.box>.about_pic{
+        transform:translateY(-55vh);
+        width: 100%;
+        height:130vh;
+        flex-direction: column;
+        padding-top:20rem;
+    }
+    .brindal_boxes_location_img>.box>#img_box{
+        margin-top: -130vh;
+        transform: translateY(-70vh);
+    }
+    .brindal_boxes_location_img>.box>#img_box2{
+        margin-top: -110vh;
+        transform: translateY(-90vh);
+    }
+    main>.see_our_bride_container>.box>p:first-child{
+        font-size: 50px;
+    }
+    main>.brindal_reflection_img_boxesContainer{
+        grid-template-columns: repeat(3,1fr);
+}
+
+}
+@media screen and (max-width:768px) {
+.bride_collection_boxes>.box>img{
+display: none;
+}
+.menu_list_collection{
+    padding-bottom: 30px;
+}
+.trunks_shows_collection_boxes>.box>img{
+  display: none;
+}
+main>.brindal_reflection_img_boxesContainer{
+    grid-template-columns: repeat(2 ,1fr);
+}
+main>.badding_blog_container>.badding_blog_boxes{
+     flex-direction: column;
+     width: 92%;
+     margin: auto;
+   
+ }
+ .badding_blog_container>.badding_blog_boxes>.box{
+    width: 90%; 
+    margin: auto;
+    height: 18rem;
+}
+.badding_blog_container>.badding_blog_boxes>.box>img{
+    width: 60%;
+    }
+ .join_us_on_instagram>.pic_container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        height: 14rem;
+        }
+
+        .join_us_on_instagram>.pic_container>.box{
+            width:100%;
+        }
+ footer>.option_conatiner{
+  width:95%;
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+  margin: auto;
+ }
+footer>.option_conatiner>ul>li{
+    line-height:1.7;
+    color: #fff;
+    transform: scaleY(1.3);
+    cursor: pointer;
+    font-size: 12px;
+}
+}
+@media screen and (max-width:720px){
+    main>.see_our_bride_container>.box>p:first-child{
+        font-size: 40px;
+          transform: scalex(1); 
+    }
+    main>.see_our_bride_container>.box>p:nth-child(2){
+        transform: scaley(1);
+        text-align: center;
+    }   
+}
+@media screen and (max-width:611px){
+    footer>.option_conatiner{
+      grid-template-columns: repeat(2,1fr); 
+ }
+ main>.see_our_bride_container{
+    margin-top: 3rem;
+     width: 100%;
+     height:auto;
+     display: flex;
+     flex-direction: column-reverse;
+ }
+ main>.see_our_bride_container>.box{
+    width:100%;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding-bottom: 30px;
+}
+main>.see_our_bride_container>img{
+    width: 100%;
+    margin-bottom: -210px;
+    height: 100vh;
+}
+#see_ore_bride_containr{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.see_our_bride_container>.img_see_ore_bride{
+    width:100%; 
+    height: 50vh;
+    margin-bottom: 0px;
+}
+main>.our_newYark_content>p:nth-child(2){
+     font-size: 40px; 
+     width: 240px;
+}
+main>.our_newYark_content>p:nth-child(3){
+  margin-bottom: 6.5rem;
+  margin-top: 2rem;
+}
+main>.long_island_location_collection{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    text-align: center;
+}
+.long_island_location_collection>.box{
+   padding-top: 10vh;
+    padding-left: 10%;
+    height: 60vh;
+}
+.long_island_location_collection>.box1{
+    height: 70vh;
+    margin-top: -80vh;
+}
+.long_island_location_collection>.box1>img{
+    width: 100%;
+    height: 80vh;
+}
+main>.brindal_reflection_img_boxesContainer{
+    grid-template-columns: repeat(1,1fr);
+}
+footer>.social_media>#about_brindal_saloon>li{
+font-size: 12px;
+    transform: scaleY(1.1);
+}
+
+}
+@media screen and (max-width:500px){
+    footer>.option_conatiner{
+        grid-template-columns: repeat(1,1fr); 
+        text-align: center;
+        line-height: 100px;
+   }
+   footer>.option_conatiner>ul{
+    margin-bottom: 20px;
+   }
+footer>.first_lower_container_footer{
+    text-align: center;
+}
+main>.brindal_image_bigOne{
+    height: 60vh;
+}
+main>.brindal_image_bigOne>img{
+height: 50vh;
+}
+
+}
+@media screen and (max-width:480px){
+ header>.birndal_logo{
+        width:100%;
+        height:30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+.dispay_block>a{
+        color: #fff;
+        font-size: 15px; 
+ }
+ header>.birndal_logo{
+    height:17vh;
+    }
+ header>.birndal_logo img{
+    width: 250px;
+    height: 50px;
+}
+ header>.menu_bar_box{
+    height: 5.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    main>.brindal_image_bigOne{
+        height: 45vh;
+    }
+    main>.brindal_image_bigOne>img{
+    height: 35vh;
+    }
+
+    .menu_list_collection>.trunks_shows_collection_boxes{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 4vh 50px;
+    }
+    
+    header>.menu_list>ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #bride_menu_list_collection{
+        top:18.5rem;
+    }
+    .menu_list_collection{
+        top:22rem;
+           }
+           #locations_menu_list_collection{
+           top:45rem;
+           
+           }
+           #aboutUs_menu_list_collection{
+               top:39.5rem;
+           }
+           #trunks_shows_menu_list_collection{
+               top:34rem;
+           }
+           #eveaning_wear_menu_list_collection{
+               top:24.5rem;
+}
+.trunk_shows_sider_box{
+    height: auto;
+}
+.trunk_shows_sider_box>.carousel>.card {
+    padding-bottom:0px;
+}
+.join_us_on_instagram>.pic_container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    height:auto;
+    }
+    .join_us_on_instagram>.pic_container>.box{
+        height:400.6px;
+        width: 100%;
+    }
+    .Upcoming_trunk_shows >.trunk_shows_sider_box>i:first-child{
+        left: -40px;
+ }
+ main>.Upcoming_trunk_shows>.button{
+  height:2rem;
+}
+.long_island_location_collection>.box>button{
+    height: 7vh;
+}
+.our_newYark_content>.brindal_boxes_location_img{
+    height:164rem;
+}
+.our_newYark_content>.brindal_boxes_location_img>#box_1{
+    display:flex;
+    flex-direction:column;
+    width: 100%; 
+    height:5rem;
+     margin-bottom: 0rem ;
+     margin-top: 17rem;
+}
+.brindal_boxes_location_img>#box_1>.img{
+transform: translateY(-20vh);
+    width:75%;
+    height:auto;
+    z-index: 900;
+}
+.brindal_boxes_location_img>#box_1>.img>img{
+height: 20rem;
+}
+.brindal_boxes_location_img>#box_1>.about_pic{
+    padding-bottom: 5rem;
+}
+.brindal_boxes_location_img>#box_1>.about_pic>button{
+   margin-top: 3rem;
+   height: 2rem;
+}
+.our_newYark_content>.brindal_boxes_location_img>#box_2{
+    display:flex;
+    flex-direction: column-reverse;
+    width: 100%; 
+    height:25rem;
+  margin: 5rem 0%;
+  margin-top:43rem;
+     transform: translate(0vh);
+}
+.brindal_boxes_location_img>#box_2>.about_pic{
+    height:35rem;
+    transform: translateY(0vh);
+    padding-bottom: 3rem;
+}
+.brindal_boxes_location_img>#box_2>#img_box{
+    transform: translateY(18rem);
+    width:75%;
+    height:auto;
+    margin: auto;
+}
+.brindal_boxes_location_img>#box_2>#img_box>img{
+height: 20rem;
+}
+.brindal_boxes_location_img>#box_2>.about_pic>button{
+    margin-top:2rem;
+ }
+ .our_newYark_content>.brindal_boxes_location_img>#box_3{
+    display:flex;
+    flex-direction: column-reverse;
+    width: 100%; 
+    height:25rem;
+  margin: 5rem 0%;
+  margin-top:4rem;
+ }
+ .brindal_boxes_location_img>#box_3>.img{
+    transform: translateY(-5rem);
+ }
+ .brindal_boxes_location_img>#box_3>.img>img{
+    height: 20rem;
+ }
+ .our_newYark_content>.brindal_boxes_location_img>#box_3>.about_pic{
+    transform: translateY(35rem);
+    height: 80rem;
+    padding-top: 20rem;
+    padding-bottom: 4.5rem;
+ }
+ .brindal_boxes_location_img>#box_3>.about_pic>button{
+    margin-top:2.5rem;
+    height: 2rem;
+ }
+ .our_newYark_content>.brindal_boxes_location_img>#box_4{
+    margin-top: 16rem;
+    margin-bottom: 0px;
+ }
+ .our_newYark_content>.brindal_boxes_location_img>#box_4>.about_pic{
+    transform: translateY(-44rem);
+    height: 40rem;
+    margin-top: 50rem;
+ }
+ .our_newYark_content>.brindal_boxes_location_img>#box_4>#img_box2{
+    transform: translateY(-97rem);
+    height: 10rem;
+    margin-top: 10rem;
+ }
+ .our_newYark_content>.brindal_boxes_location_img>#box_4>#img_box2>img{
+height: 20rem;
+ }
+ .brindal_boxes_location_img>#box_4>.about_pic>button{
+    margin-top:3rem;
+    height:2rem;
+ }
+}
